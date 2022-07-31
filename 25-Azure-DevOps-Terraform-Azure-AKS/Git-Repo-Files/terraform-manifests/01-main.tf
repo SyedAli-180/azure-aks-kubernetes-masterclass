@@ -20,10 +20,10 @@ terraform {
       source  = "hashicorp/azuread"
       version = "~> 2.0"
     }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.0"
-    }
+#     random = {
+#       source  = "hashicorp/random"
+#       version = "~> 3.0"
+#     }
   }
 
 # Terraform State Storage to Azure Storage Container
@@ -39,13 +39,11 @@ terraform {
 
 # 2. Terraform Provider Block for AzureRM
 provider "azurerm" {
-  features {
-
-  }
+  features {}
 }
 
 # 3. Terraform Resource Block: Define a Random Pet Resource
-resource "random_pet" "aksrandom" {
+# resource "random_pet" "aksrandom" {
 
-}
+# }
 
