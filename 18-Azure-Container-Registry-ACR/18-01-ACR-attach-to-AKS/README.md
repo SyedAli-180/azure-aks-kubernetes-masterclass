@@ -91,6 +91,10 @@ export ACR_IMAGE_TAG=v1
 echo $ACR_REGISTRY, $ACR_NAMESPACE, $ACR_IMAGE_NAME, $ACR_IMAGE_TAG
 
 # Login to ACR
+#Try adding "winpty" before the "docker ..." command.
+#It enables TTY on Window. Useful for GitBash, Putty and MobaXTerm.
+
+$ winpty docker login $ACR_REGISTRY
 docker login $ACR_REGISTRY
 
 # Tag
